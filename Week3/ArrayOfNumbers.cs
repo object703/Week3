@@ -34,6 +34,25 @@
                 return false;
             }
         }
+        public int GCD(int first, int second)
+        {
+            int x = _numbers[first];
+            int y = _numbers[second];
+
+            while (x != y)
+            {
+                if (x > y)
+                {
+                    x = x - y;
+                }
+                else
+                {
+                    y = y - x;
+                }
+            }
+
+            return x;
+        }
         public int GetMax()
         {
             return _numbers.Max();

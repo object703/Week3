@@ -55,6 +55,12 @@ namespace Week3
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        private void btn_gcd_Click(object sender, EventArgs e)
+        {
+            int x = cb_1stIndex.SelectedIndex;
+            int y = cb_2ndIndex.SelectedIndex;
+            lbl_output.Text = array.GCD(x, y).ToString();
+        }
         private void btn_equal_Click(object sender, EventArgs e)
         {
             int x = cb_1stIndex.SelectedIndex;
