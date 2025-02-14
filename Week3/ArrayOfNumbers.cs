@@ -19,5 +19,9 @@
         }
 
         public int[] Numbers { get => _numbers; set => _numbers = value; }
+        public void updateValue(int index, int value)
+        {
+            _numbers[index] = value;
+        }
     }
 }

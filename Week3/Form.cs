@@ -50,7 +50,8 @@ namespace Week3
 
         private void btn_newValue_Click(object sender, EventArgs e)
         {
-
+            array.updateValue(cb_index.SelectedIndex, int.Parse(txt_newValue.Text));
+            updateLabels();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
