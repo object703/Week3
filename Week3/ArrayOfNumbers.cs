@@ -2,7 +2,7 @@
 {
     internal class ArrayOfNumbers
     {
-        int[] _numbers;
+        private int[] _numbers;
 
         // Create array of specified length with each value 0
         public ArrayOfNumbers(int length)
@@ -17,5 +17,7 @@
             // https://learn.microsoft.com/en-us/dotnet/api/system.array.clone?view=net-8.0
             _numbers = (int[])numbers.Clone();
         }
+
+        public int[] Numbers { get => _numbers; set => _numbers = value; }
     }
 }
