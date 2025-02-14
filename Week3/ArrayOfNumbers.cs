@@ -60,5 +60,16 @@
         {
             return _numbers.Length;
         }
+        public int GetSum()
+        {
+            int sum = 0;
+
+            foreach (int x in _numbers)
+            {
+                sum += x;
+            }
+
+            return sum;
+        }
     }
 }

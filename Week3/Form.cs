@@ -81,5 +81,9 @@ namespace Week3
             lbl_output.Text = $"Max array value: {array.GetMax()}";
         }
 
+        private void btn_sum_Click(object sender, EventArgs e)
+        {
+            lbl_output.Text = $"Sum of array elements: {array.GetSum()}";
+        }
     }
 }
