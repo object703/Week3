@@ -103,7 +103,7 @@ namespace Week3
 
         private void btn_average_Click(object sender, EventArgs e)
         {
-            lbl_output.Text = $"";
+            lbl_output.Text = $"Average of array elements values {array.GetAverage()}";
         }
 
         private void btn_toString_Click(object sender, EventArgs e)
