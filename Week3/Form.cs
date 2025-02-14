@@ -18,7 +18,7 @@ namespace Week3
         // Create array of length
         private void btn_arrayLength_Click(object sender, EventArgs e)
         {
-            array = new ArrayOfNumbers(int.Parse(txt_length.Text) - 1);
+            array = new ArrayOfNumbers(int.Parse(txt_length.Text));
             updateLabels();
         }
 
@@ -37,30 +37,40 @@ namespace Week3
             updateLabels();
         }
 
-        // Clear and update the combobox
+        // Reset the UI when creating new object, update combobox elements
         private void updateLabels()
         {
+            txt_length.Text = string.Empty;
+            txt_values.Text = string.Empty;
             cb_index.Items.Clear();
+            cb_1stIndex.Items.Clear();
+            cb_2ndIndex.Items.Clear();
 
             for (int i = 0; i <= array.Numbers.Length; i++)
             {
                 cb_index.Items.Add(i.ToString());
             }
+
+            foreach (int number in array.Numbers)
+            {
+                cb_1stIndex.Items.Add(number);
+                cb_2ndIndex.Items.Add(number);
+            }
         }
 
         private void btn_newValue_Click(object sender, EventArgs e)
         {
-            array.updateValue(cb_index.SelectedIndex, int.Parse(txt_newValue.Text));
+            array.SetValue(cb_index.SelectedIndex, int.Parse(txt_newValue.Text));
             updateLabels();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
         private void btn_gcd_Click(object sender, EventArgs e)
         {
             int x = cb_1stIndex.SelectedIndex;
             int y = cb_2ndIndex.SelectedIndex;
             lbl_output.Text = array.GCD(x, y).ToString();
         }
+
         private void btn_equal_Click(object sender, EventArgs e)
         {
             int x = cb_1stIndex.SelectedIndex;
@@ -81,9 +91,24 @@ namespace Week3
             lbl_output.Text = $"Max array value: {array.GetMax()}";
         }
 
+        private void btn_count_Click(object sender, EventArgs e)
+        {
+            lbl_output.Text = $"Number of array elements: {array.GetCount()}";
+        }
+
         private void btn_sum_Click(object sender, EventArgs e)
         {
             lbl_output.Text = $"Sum of array elements: {array.GetSum()}";
+        }
+
+        private void btn_average_Click(object sender, EventArgs e)
+        {
+            lbl_output.Text = $"";
+        }
+
+        private void btn_toString_Click(object sender, EventArgs e)
+        {
+            lbl_output.Text = $"";
         }
     }
 }

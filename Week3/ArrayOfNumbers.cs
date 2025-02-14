@@ -19,10 +19,12 @@
         }
 
         public int[] Numbers { get => _numbers; set => _numbers = value; }
-        public void updateValue(int index, int value)
+
+        public void SetValue(int index, int value)
         {
             _numbers[index] = value;
         }
+
         public bool IsEqual(int x, int y)
         {
             if (x == y)
@@ -34,6 +36,7 @@
                 return false;
             }
         }
+
         public int GCD(int first, int second)
         {
             int x = _numbers[first];
@@ -53,13 +56,17 @@
 
             return x;
         }
+
         public int GetMax()
         {
             return _numbers.Max();
+        }
+
         public int GetCount()
         {
             return _numbers.Length;
         }
+
         public int GetSum()
         {
             int sum = 0;
