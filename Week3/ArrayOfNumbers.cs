@@ -81,9 +81,19 @@
 
         public double GetAverage()
         {
-            double average = 0;
-
             return GetSum() / GetCount();
+        }
+
+        public override string ToString()
+        {
+            string output = "";
+
+            output = string.Join(", ", _numbers.ToString());
+            
+            return $"""
+                Array contents:
+                {output}
+                """;
         }
     }
 }

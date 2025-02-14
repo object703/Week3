@@ -54,6 +54,9 @@
             cb_1stIndex = new ComboBox();
             cb_2ndIndex = new ComboBox();
             label9 = new Label();
+            label8 = new Label();
+            btn_add = new Button();
+            btn_multiply = new Button();
             SuspendLayout();
             // 
             // txt_length
@@ -294,11 +297,44 @@
             label9.TabIndex = 27;
             label9.Text = "Select 2 values from the array for the GCD and IsEqual methods";
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Location = new Point(54, 333);
+            label8.Name = "label8";
+            label8.Size = new Size(58, 15);
+            label8.TabIndex = 28;
+            label8.Text = "Mutators";
+            // 
+            // btn_add
+            // 
+            btn_add.Location = new Point(37, 351);
+            btn_add.Name = "btn_add";
+            btn_add.Size = new Size(75, 23);
+            btn_add.TabIndex = 29;
+            btn_add.Text = "Add";
+            btn_add.UseVisualStyleBackColor = true;
+            btn_add.Click += btn_add_Click;
+            // 
+            // btn_multiply
+            // 
+            btn_multiply.Location = new Point(118, 351);
+            btn_multiply.Name = "btn_multiply";
+            btn_multiply.Size = new Size(75, 23);
+            btn_multiply.TabIndex = 30;
+            btn_multiply.Text = "Multiply";
+            btn_multiply.UseVisualStyleBackColor = true;
+            btn_multiply.Click += btn_multiply_Click;
+            // 
             // Form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(467, 357);
+            ClientSize = new Size(467, 394);
+            Controls.Add(btn_multiply);
+            Controls.Add(btn_add);
+            Controls.Add(label8);
             Controls.Add(label9);
             Controls.Add(cb_2ndIndex);
             Controls.Add(cb_1stIndex);
@@ -359,5 +395,8 @@
         private ComboBox cb_1stIndex;
         private ComboBox cb_2ndIndex;
         private Label label9;
+        private Label label8;
+        private Button btn_add;
+        private Button btn_multiply;
     }
 }

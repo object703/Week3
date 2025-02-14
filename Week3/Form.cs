@@ -2,7 +2,7 @@ namespace Week3
 {
     public partial class Form : System.Windows.Forms.Form
     {
-        ArrayOfNumbers array;
+        private ArrayOfNumbers array;
 
         public Form()
         {
@@ -108,7 +108,17 @@ namespace Week3
 
         private void btn_toString_Click(object sender, EventArgs e)
         {
-            lbl_output.Text = $"";
+            lbl_output.Text = $"{array.ToString()}";
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_multiply_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
