@@ -98,7 +98,7 @@ namespace Week3
 
         private void btn_sum_Click(object sender, EventArgs e)
         {
-            lbl_output.Text = $"Sum of array elements: {array.GetSum()}";
+            lbl_output.Text = $"Sum of array elements values: {array.GetSum()}";
         }
 
         private void btn_average_Click(object sender, EventArgs e)

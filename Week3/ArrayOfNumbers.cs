@@ -78,5 +78,12 @@
 
             return sum;
         }
+
+        public double GetAverage()
+        {
+            double average = 0;
+
+            return GetSum() / GetCount();
+        }
     }
 }
