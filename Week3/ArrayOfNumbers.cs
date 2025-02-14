@@ -88,12 +88,29 @@
         {
             string output = "";
 
-            output = string.Join(", ", _numbers.ToString());
-            
-            return $"""
-                Array contents:
-                {output}
-                """;
+            foreach (var item in _numbers)
+            {
+                output += item + ", ";
+            }
+
+            return output;
+        }
+
+        public void Add(int constant)
+        {
+            for (int i =0; i < _numbers.Length; ++i)
+            {
+                _numbers[i] += constant;
+            }
+        }
+
+
+        public void Multiply(int multiplier)
+        {
+            for (int i = 0; i < _numbers.Length; i++)
+            {
+                _numbers[i] *= multiplier;
+            }
         }
     }
 }

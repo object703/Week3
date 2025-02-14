@@ -108,17 +108,32 @@ namespace Week3
 
         private void btn_toString_Click(object sender, EventArgs e)
         {
-            lbl_output.Text = $"{array.ToString()}";
+            lbl_output.Text = $"""
+                Array values:
+                {array.ToString()}
+                """;
         }
 
         private void btn_add_Click(object sender, EventArgs e)
         {
+            lbl_output.Text = "Old values:";
+            lbl_output.Text += "\r\n" + array.ToString() + "\r\n";
 
+            array.Add(int.Parse(txt_mutator.Text));
+
+            lbl_output.Text += "\r\nNew multiplied values:";
+            lbl_output.Text += "\r\n" + array.ToString();
         }
 
         private void btn_multiply_Click(object sender, EventArgs e)
         {
+            lbl_output.Text = "Old values:";
+            lbl_output.Text += "\r\n" + array.ToString() + "\r\n";
 
+            array.Multiply(int.Parse(txt_mutator.Text));
+
+            lbl_output.Text += "\r\nNew multiplied values:";
+            lbl_output.Text += "\r\n" + array.ToString();
         }
     }
 }

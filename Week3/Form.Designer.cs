@@ -57,6 +57,8 @@
             label8 = new Label();
             btn_add = new Button();
             btn_multiply = new Button();
+            txt_mutator = new TextBox();
+            label10 = new Label();
             SuspendLayout();
             // 
             // txt_length
@@ -268,7 +270,7 @@
             lbl_output.BackColor = SystemColors.Info;
             lbl_output.Location = new Point(199, 223);
             lbl_output.Name = "lbl_output";
-            lbl_output.Size = new Size(248, 105);
+            lbl_output.Size = new Size(248, 101);
             lbl_output.TabIndex = 24;
             lbl_output.Text = "---";
             // 
@@ -309,7 +311,7 @@
             // 
             // btn_add
             // 
-            btn_add.Location = new Point(37, 351);
+            btn_add.Location = new Point(37, 360);
             btn_add.Name = "btn_add";
             btn_add.Size = new Size(75, 23);
             btn_add.TabIndex = 29;
@@ -319,7 +321,7 @@
             // 
             // btn_multiply
             // 
-            btn_multiply.Location = new Point(118, 351);
+            btn_multiply.Location = new Point(118, 360);
             btn_multiply.Name = "btn_multiply";
             btn_multiply.Size = new Size(75, 23);
             btn_multiply.TabIndex = 30;
@@ -327,11 +329,29 @@
             btn_multiply.UseVisualStyleBackColor = true;
             btn_multiply.Click += btn_multiply_Click;
             // 
+            // txt_mutator
+            // 
+            txt_mutator.Location = new Point(118, 331);
+            txt_mutator.Name = "txt_mutator";
+            txt_mutator.Size = new Size(78, 23);
+            txt_mutator.TabIndex = 31;
+            // 
+            // label10
+            // 
+            label10.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label10.Location = new Point(202, 333);
+            label10.Name = "label10";
+            label10.Size = new Size(206, 35);
+            label10.TabIndex = 32;
+            label10.Text = "Enter a value for the mutator methods";
+            // 
             // Form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(467, 394);
+            ClientSize = new Size(467, 448);
+            Controls.Add(label10);
+            Controls.Add(txt_mutator);
             Controls.Add(btn_multiply);
             Controls.Add(btn_add);
             Controls.Add(label8);
@@ -398,5 +418,7 @@
         private Label label8;
         private Button btn_add;
         private Button btn_multiply;
+        private TextBox txt_mutator;
+        private Label label10;
     }
 }
