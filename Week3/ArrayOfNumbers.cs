@@ -23,6 +23,17 @@
         {
             _numbers[index] = value;
         }
+        public bool IsEqual(int x, int y)
+        {
+            if (x == y)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public int GetMax()
         {
             return _numbers.Max();

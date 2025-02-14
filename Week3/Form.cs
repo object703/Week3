@@ -55,7 +55,20 @@ namespace Week3
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        private void btn_equal_Click(object sender, EventArgs e)
         {
+            int x = cb_1stIndex.SelectedIndex;
+            int y = cb_2ndIndex.SelectedIndex;
+
+            if (array.IsEqual(x, y))
+            {
+                lbl_output.Text = "Numbers are equal";
+            }
+            else
+            {
+                lbl_output.Text = "Numbers are not equal";
+            }
+        }
 
         private void btn_max_Click(object sender, EventArgs e)
         {
