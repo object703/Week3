@@ -23,5 +23,12 @@
         {
             _numbers[index] = value;
         }
+        public int GetMax()
+        {
+            return _numbers.Max();
+        public int GetCount()
+        {
+            return _numbers.Length;
+        }
     }
 }

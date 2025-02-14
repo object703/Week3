@@ -57,6 +57,10 @@ namespace Week3
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        private void btn_max_Click(object sender, EventArgs e)
+        {
+            lbl_output.Text = $"Max array value: {array.GetMax()}";
         }
+
     }
 }
